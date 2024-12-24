@@ -106,27 +106,27 @@ const servicesAnimation = () => {
     const sliderContent = [
       {
         name: "SMM",
-        img: "../assets/images/services/service_01.jpg",
+        img: "./assets/images/services/service_01.jpg",
       },
       {
         name: "Editing",
-        img: "../assets/images/services/service_02.jpg",
+        img: "./assets/images/services/service_02.jpg",
       },
       {
         name: "SEO",
-        img: "../assets/images/services/service_03.jpg",
+        img: "./assets/images/services/service_03.jpg",
       },
       {
         name: "Branding",
-        img: "../assets/images/services/service_04.jpg",
+        img: "./assets/images/services/service_04.jpg",
       },
       {
         name: "Designing",
-        img: "../assets/images/services/service_05.jpg",
+        img: "./assets/images/services/service_05.jpg",
       },
       {
         name: "Scripting",
-        img: "../assets/images/services/service_06.jpg",
+        img: "./assets/images/services/service_06.jpg",
       },
     ];
 
