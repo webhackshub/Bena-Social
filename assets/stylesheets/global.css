@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "SWC";
+  src: url(../fonts/Steal_Werks_Closed.woff2)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", serif
+}
+
+::-webkit-scrollbar {
+  display: none
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%
+}
+
+main {
+  color: white;
+  background: black
+}
+
+section.home {
+  width: 100%;
+  height: 100vh;
+  position: relative
+}
+
+.home .showreel {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1
+}
+
+.home video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.home .reveal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+  pointer-events: all
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: none
+}
+
+.hero-container nav {
+  width: 100%;
+  padding: 2vw 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20
+}
+
+.hero-container nav h2 {
+  font-size: 2vw;
+  font-weight: 500;
+  font-family: "SWC"
+}
+
+.hero-container nav ul {
+  gap: 2.5vw;
+  display: flex
+}
+
+.hero-container nav ul li a {
+  color: white;
+  font-size: 1vw
+}
+
+.hero-container .hero {
+  text-align: center;
+  position: absolute
+}
+
+.hero-container .hero h2 {
+  font-size: 7vw;
+  font-weight: 500;
+  font-family: "SWC"
+}
+
+.hero-container .hero p {
+  font-size: 1.5vw
+}
+
+section.about {
+  gap: 6vw;
+  width: 100%;
+  padding: 2vw 4vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+section.about .text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center
+}
+
+section.about p {
+  font-size: 8vw;
+  line-height: 7vw;
+  font-weight: 300;
+  text-align: center
+}
+
+section.about .line {
+  width: 80%;
+  height: .5px;
+  background: #4f4f4f
+}
+
+section.about .about-us {
+  gap: 4vw;
+  width: 80%;
+  display: flex
+}
+
+section.about .about-us span.vision {
+  width: 40%;
+  font-size: 1vw;
+  color: #4f4f4f
+}
+
+section.about .about-us span.about {
+  width: 60%;
+  font-size: 1.6vw
+}
+
+.services {
+  width: 200vw;
+  height: 100vh;
+  display: flex
+}
+
+.services .text-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.services .text-container h2 {
+  font-size: 10vw;
+  font-weight: 300
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative
+}
+
+.slider-container {
+  position: absolute;
+  width: 30%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  cursor: pointer;
+  will-change: transform, opacity, clip-path;
+  z-index: 2
+}
+
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+  opacity: .75;
+  will-change: transform
+}
+
+.slider-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70px;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 10
+}
+
+.slider-title h1 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 500
+}
+
+.slider-title h1 span {
+  position: relative;
+  display: inline-block;
+  transform: translateY(50px);
+  will-change: transform
+}
+
+.slider-counter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.5em;
+  text-align: center;
+  z-index: 2
+}
+
+.slider-counter p span {
+  padding: 0 .5vw
+}
+
+.slider-preview {
+  position: absolute;
+  overflow: hidden;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 0
+}
+
+.slider-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pan 20s infinite linear
+}
+
+@keyframes pan {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.25)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
